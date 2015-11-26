@@ -2333,10 +2333,13 @@ public class svm {
 				sum += sv_coef[i] * Kernel.k_function(x,model.SV[i],model.param);
 			sum -= model.rho[0];
 			dec_values[0] = sum;
-
+			
+			//modified 2015
+/*
 			if(model.param.svm_type == svm_parameter.ONE_CLASS)
 				return (sum>0)?1:-1;
 			else
+			*/
 				return sum;
 		}
 		else
